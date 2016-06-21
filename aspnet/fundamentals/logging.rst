@@ -144,9 +144,7 @@ A LoggerFactory instance can optionally be configured with custom ``FilterLogger
   :dedent: 12
 
 
-.. note:: You can specify the minimum logging level each logger provider will use when you configure it. For example, the ``AddConsole`` extension method supports an optional parameter for setting its minimum ``LogLevel``.
-
-In addition to setting the minimum logging level, you can also specify that whether or not to include scope information in the output by setting ``includeScopes`` to ``true``. You can also specify a function to filter the log levels you wish to include (for example ``l => l >= LogLevel.Warning``) or a function to filter based on both log levels and category strings (for example, ``(category,loglevel) => category.Contains("MyController") && loglevel >= LogLevel.Trace``).
+.. note:: You can specify the minimum logging level each logger provider will use when you configure it. For example, the ``AddConsole`` extension method supports an optional parameter for setting its minimum ``LogLevel``. You can also specify a function to filter the log levels you wish to include (for example ``l => l >= LogLevel.Warning``) or a function to filter based on both log levels and category strings (for example, ``(category, loglevel) => category.Contains("MyController") && loglevel >= LogLevel.Trace``). The ``ConsoleLogger` allows you to specify whether or not to include scope information in the output by setting ``includeScopes`` to ``true``.
 
 Configuring TraceSource Logging
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
